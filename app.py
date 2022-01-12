@@ -56,12 +56,12 @@ class VideoTransformer(VideoTransformerBase):
         return frame
 
 def newtest():
-    FRAME_WINDOW = st.image([])
+    
     camera = cv2.VideoCapture(0)
 
     while True:
         _, frame = camera.read()
-        FRAME_WINDOW.image(frame)
+        st.image(frame)
     else:
         st.write('Stopped')
     
