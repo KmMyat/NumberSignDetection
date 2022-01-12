@@ -54,10 +54,22 @@ class VideoTransformer(VideoTransformerBase):
             cv2.putText(frame, prediction[0][0], (10, 120), cv2.FONT_HERSHEY_PLAIN, 1, (0,255,255), 1) 
 
         return frame
+
+def newtest():
+    FRAME_WINDOW = st.image([])
+    camera = cv2.VideoCapture(0)
+
+    while run:
+        _, frame = camera.read()
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        FRAME_WINDOW.image(frame)
+    else:
+        st.write('Stopped')
+    
 def main():
 
     st.title("Real Time Face Emotion Detection Application")
-    activiteis = ["Home", "Webcam Face Detection", "About"]
+    activiteis = ["Home", "Webcam Face Detection", "About","new"]
     choice = st.sidebar.selectbox("Select Activity", activiteis)
     st.sidebar.markdown(
         """ Developed by Mohammad Juned Khan    
@@ -98,7 +110,8 @@ def main():
                              		<br></br>"""
 
         st.markdown(html_temp4, unsafe_allow_html=True)
-
+    elif choice == 'new':
+        newtest()
     else:
         pass
 
