@@ -6,6 +6,7 @@ import operator
 import sys, os
 import tensorflow as tf
 from tensorflow import keras
+from PIL import Image
 
 model = keras.models.load_model('sbLCNN.h5')
 categories = {0: 'ZERO', 1: 'ONE', 2: 'TWO', 3: 'THREE', 4: 'FOUR', 5: 'FIVE'}
@@ -61,7 +62,8 @@ def newtest():
 
     while True:
         _, frame = camera.read()
-        st.image(frame)
+        imagee = Image.open(frame)
+        st.image(imagee)
     else:
         st.write('Stopped')
     
