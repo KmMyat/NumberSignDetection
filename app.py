@@ -40,7 +40,7 @@ class VideoTransformer(VideoTransformerBase):
         roi = cv2.erode(roi, kernel, iterations = 1)
 
         while True:
-            result = loaded_model.predict(roi.reshape(1, 64, 64, 1))
+            result = model.predict(roi.reshape(1, 64, 64, 1))
             prediction = {'ZERO': result[0][0], 
                           'ONE': result[0][1], 
                           'TWO': result[0][2],
