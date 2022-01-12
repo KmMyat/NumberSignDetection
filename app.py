@@ -1,10 +1,8 @@
 import streamlit as st
-from keras.preprocessing.image import img_to_array
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 import numpy as np
-from keras.models import model_from_json
-import operator
 import cv2
+import operator
 import sys, os
 import tensorflow as tf
 from tensorflow import keras
