@@ -1,7 +1,7 @@
 import streamlit as st
 #from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 import numpy as np
-import cv2
+import opencv as cv2
 import operator
 import sys, os
 import tensorflow as tf
