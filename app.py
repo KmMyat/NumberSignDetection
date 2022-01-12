@@ -7,7 +7,7 @@ import sys, os
 import tensorflow as tf
 from tensorflow import keras
 
-model = keras.models.load_model('/content/sbLCNN.h5')
+model = keras.models.load_model('sbLCNN.h5')
 categories = {0: 'ZERO', 1: 'ONE', 2: 'TWO', 3: 'THREE', 4: 'FOUR', 5: 'FIVE'}
 
 class VideoTransformer(VideoTransformerBase):
