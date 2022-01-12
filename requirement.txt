@@ -4,6 +4,7 @@ keras~=2.4.3
 opencv-contrib-python-headless
 tensorflow-cpu
 streamlit_webrtc
+streamlit_webrtc==0.33.0
 webrtc_streamer
 keras
 tensorflow
