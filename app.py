@@ -56,12 +56,6 @@ class VideoTransformer(VideoTransformerBase):
 
         return frame
 
-def newtest():
-    
-    camera = cv2.VideoCapture(0)
-    _, frame = camera.read()
-    imagee = Image.open(frame)
-    st.image(imagee)
         
 def main():
 
@@ -107,8 +101,7 @@ def main():
                              		<br></br>"""
 
         st.markdown(html_temp4, unsafe_allow_html=True)
-    elif choice == 'new':
-        newtest()
+
     else:
         pass
 
