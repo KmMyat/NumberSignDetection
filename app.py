@@ -59,14 +59,10 @@ class VideoTransformer(VideoTransformerBase):
 def newtest():
     
     camera = cv2.VideoCapture(0)
-
-    while True:
-        _, frame = camera.read()
-        imagee = Image.open(frame)
-        st.image(imagee)
-    else:
-        st.write('Stopped')
-    
+    _, frame = camera.read()
+    imagee = Image.open(frame)
+    st.image(imagee)
+        
 def main():
 
     st.title("Real Time Face Emotion Detection Application")
